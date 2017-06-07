@@ -64,6 +64,11 @@ Henrique Capatto  RA:146406\break
 ```{r setup, include=FALSE}
 dados = read.table("dados_trabalhofinal_me610.txt")
 
+#Eliniminando a coluna com os id's
+dados$V1=NULL
+
 #names(dados)
+# verificação de dados faltantes
+sapply(dados,function(x) sum(is.na(x)))
 
 ```
